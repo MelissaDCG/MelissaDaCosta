@@ -1,0 +1,250 @@
+// Variables tablette de couleurs
+$lila : #D9B8C4;
+$blush : #D8AA96;
+$lightPurple : #f3d9dc;
+$purple : #94686D;
+$grey : #5D4954;
+$darkGrey : #402A2C;
+
+// Police
+@font-face {
+    font-family: "Ubuntu-Regular";
+    src: url("font/Ubuntu-Regular.ttf");
+}
+  
+body {
+    margin: 0;
+    background-color: white;
+    font-family: "Ubuntu-Regular",Arial, Verdana, sans-serif !important;
+}
+  
+.heroImage {
+    background-image: url("../images/desk2.jpg");
+    background-color: black !important;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
+.fa-bars {
+    color: #ffffff !important;
+}
+  
+.fa-bars:hover {
+    color: #fab49c !important;
+}
+  
+#coverText {
+    border: 2px solid white;
+    width: 100%;
+    height: 100%;
+    font-family: "Ubuntu-Regular",Arial, Verdana, sans-serif;
+}
+  
+.tailleNom {
+    font-size: 4rem !important;
+}
+  
+.tailleMetier {
+    font-size: 2rem !important;
+}
+  
+.colorCover {
+    /*gradient bieber's fist */
+    background: linear-gradient(315deg, rgba(255,166,158,0.7) 0%, rgba(93,73,84,0.7) 74%);
+}
+
+.bgPurple {
+    background-color: $purple;
+}
+  
+.bgGrey {
+    /* background-color: #94686D !important; */
+    background-color:  $grey !important;
+}
+
+.textLila {
+    color: $lila;
+}
+
+.bgDarkGrey {
+    background-color: $darkGrey;
+}
+
+.bgLightPurple {
+    background-color: $lightPurple;
+}
+  
+.nav-link:hover {
+    color: #fba49c !important;
+}
+
+.h-85 {
+    height: 85%
+}
+
+.h-45 {
+    height: 20%;
+}
+
+.underline {
+    height: 3px;
+    width: 10%;
+    background: linear-gradient(315deg, rgba(255,166,158,0.8) 0%, rgba(93,73,84,0.8) 74%);
+    position: relative;
+    top: -15px;
+}
+
+
+//   animation chevrons
+$base: 0.6rem;
+
+.container-chevrons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chevron {
+    position: absolute;
+    width: $base * 3.5;
+    height: $base * 0.8;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+    animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+    animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,.chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: white;
+}
+
+.chevron:before {
+    left: 0;
+    transform: skewY(30deg);
+}
+
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skewY(-30deg);
+    }
+
+@keyframes move-chevron {
+    25% {
+      opacity: 1;
+        }
+    33.3% {
+      opacity: 1;
+      transform: translateY($base * 3.8);
+    }
+    66.6% {
+      opacity: 1;
+      transform: translateY($base * 5.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY($base * 8) scale(0.5);
+    }
+}
+
+.customBtn {
+    color: $purple !important;
+    border-color : $purple !important;
+    &:hover {
+        background: linear-gradient(315deg, rgba(255,166,158,0.8) 0%, rgba(93,73,84,0.8) 74%);
+        color: white !important;
+        border-color: linear-gradient(315deg, rgba(255,166,158,0.8) 0%, rgba(93,73,84,0.8) 74%);
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.textSize {
+    font-size: 1.5rem;
+}
+
+.titleSkill {
+    font-size: 2rem;
+}
+
+//images de competences
+.container-skills {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+//
+.container-image {
+    position: relative;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.skills {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+.imageSkills {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+ 
+   
+@import "./laptop";
