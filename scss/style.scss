@@ -1,7 +1,11 @@
 // Variables tablette de couleurs
 $darkGrey: #0A0A0A;
-$grey: #DECBB7;
+$grey: #3a3837;
 $deepPink: #FF008A;
+$redCrayola:  #EB0046;
+$deepPinkWithOpactity: rgba(255,0,138,0.5);
+$redCrayolaWithOpacity: rgba(235,0,70,0.5);
+
 
 // Police
 @font-face {
@@ -13,6 +17,10 @@ body {
     margin: 0;
     background-color: white;
     font-family: "Anton-Regular",Arial, Verdana, sans-serif !important;
+}
+
+.fontArial {
+    font-family: Arial !important;
 }
   
 .heroImage {
@@ -41,7 +49,7 @@ body {
 }
 
 .bgGradient {
-    background: -webkit-linear-gradient(#EB0046, #ff008a);
+    background: -webkit-linear-gradient($redCrayola, $deepPink);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -61,7 +69,7 @@ body {
 .underline {
     height: 4px;
     width: 5%;
-    background: linear-gradient(315deg, $deepPink 0%, #EB0046 75%);
+    background: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%);
 }
 
 li {
@@ -70,9 +78,9 @@ li {
 
 .customBtn {
     border: 3px solid !important;
-    border-image: linear-gradient(315deg, $deepPink 0%, #EB0046 75%) 1 !important;    
+    border-image: linear-gradient(315deg, $deepPink 0%, $redCrayola75%) 1 !important;    
     &:hover {
-        background: linear-gradient(315deg, $deepPink 0%, #EB0046 75%);
+        background: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%);
     }
 }
 
@@ -85,8 +93,18 @@ li {
 }
 
 .borderCard {
-    border: 3px solid !important;
+    border-width: medium !important;
+    border-image: linear-gradient(315deg, $deepPinkWithOpactity 0%, $redCrayolaWithOpacity 75%) 1 !important;    
+    &:hover {
+        border-image: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%) 1 !important;    
+    }
+    h4:hover {
+        color: #FF008A !important;
+    }
+  
 }
+
+
 
 
 
@@ -160,7 +178,7 @@ $base: 0.6rem;
 }
 
 .linkGradient:hover {
-    background: -webkit-linear-gradient(#EB0046, #ff008a);
+    background: -webkit-linear-gradient($redCrayola, $deepPink);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
