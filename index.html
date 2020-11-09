@@ -11,67 +11,21 @@
 </head>
 <body>
     <header>
-        <div class= "heroImage d-flex-row justify-content-center align-items-center">
-            <div class="h-85 d-flex justify-content-center align-items-center"> 
-                <div class="container colorCover p-4 animate__animated animate__zoomIn">
-                    <div id="coverText" class="container p-4">
-                        <h1 class="text-center text-uppercase text-white animate__animated animate__fadeInDown animate__delay-1s tailleNom">Melissa Da Costa</h1>
-                        <br>
-                        <h3 class="text-center text-white animate__animated animate__fadeInUp animate__delay-1s tailleMetier"><strong>Développeuse web</strong></h3>                        
-                    </div>
+        <div class="heroImage">
+            <div class="bgLinear">
+                <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="bgGradient tailleNom">Melissa Da Costa</h1>
+                    <h2 class="text-white tailleMetier">Développeuse Web</h2>
                 </div>
-            </div>
-
-            <div>
-                <a href="#menu"> 
-                    <div class="container-chevrons">
-                        <div class="chevron"></div>
-                        <div class="chevron"></div>
-                        <div class="chevron"></div>
-                    </div>
-                </a>
+               
             </div>
         </div>
-            <nav id="menu" class="navbar navbar-dark navbar-expand-lg bgGrey">
-                <a class="navbar-brand" href="#">Melissa Da Costa</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-              
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto ">
-                        <li class="nav-item active">
-                            
-                            <a class="nav-link text-white text-uppercase" href="#aboutMe"><i class="fas fa-female d-lg-none"></i> À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#skills"><i class="fas fa-cogs d-lg-none"></i> Compétences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#experience"><i class="fas fa-briefcase d-lg-none"></i> Expérience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#education"><i class="fas fa-graduation-cap d-lg-none"></i> Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#portfolio"><i class="fas fa-laptop-code d-lg-none"></i> Portfolio</a>
-                        </li>                        
-                        <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#cv"><i class="far fa-file-alt d-lg-none"></i> CV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#contactMe"><i class="far fa-envelope  d-lg-none"></i> Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        
+    </header>
     <main>
         <section id="aboutMe" class="container p-3">
-            <h3 class="text-black p-2 text-uppercase text-center">À propos</h3>
-            <div class="row w-100 justify-content-center">
-                <div class="underline mb-5"></div>
+            <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                <h3 class="text-uppercase titleSection">À propos</h3>
+                <div class="underline mb-5 bgGradient"></div>
             </div>
             <div class="row">
                 <div class="col-lg-8">
@@ -92,52 +46,37 @@
                 </div>
             </div> 
         </section>
-        <section id="skils" class="container-fluid bgLightPurple m-0 p-0">
-                <h3 class="text-black p-2 text-uppercase text-center">Compétences</h3>
-                <div class="row w-100 justify-content-center">
-                    <div class="underline mb-4"></div>
-                </div>
-                <div class="text-center mb-5">
-                    <ul>
-                        <li class="textSize">Maquetter une application.</li>
-                        <li class="textSize" >Réaliser une interface utilisateur web statique et adaptable.</li>
-                        <li class="textSize">Développer une interface utilisateur web dynamique.</li>
-                        <li class="textSize">Réaliser une interface utilisateur avec une solution de gestion de contenu ou e-commerce.</li>
-                        <li class="textSize">Développement dans un langage objet.</li>
-                        <li class="textSize">Utiliser un environnement de développement intégré y compris en anglais.</li>
-                        <li class="textSize">Connaissance du langage de requête de type SQL.</li>
-                        <li class="textSize">Mettre en œuvre les instructions de création, de modification et de suppression de base de données.</li>
-                        <li class="textSize">Écriture des algorithmes.</li>
-                        <li class="textSize">Corriger les erreurs et remédier aux vulnérabilités détectées.</li>
-                        <li class="textSize">Tester les applications.</li>
-                        <li class="textSize">Rédiger des rapports d’activité et de reste à faire.</li>
-                    </ul>
-                </div> 
-                <div class="row m-0 p-0 skills w-100">
-                    <img src="./images/skills.png" class="imageSkills" alt="...">
+        <section class="container-fluid m-0 p-0 bgGrey">
+                <div class="row m-0 p-4 w-100">
+                    <div class="container p-2 d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="text-uppercase titleSection">Compétences</h3>
+                        <div class="underline mb-4"></div>
+                    </div>
                     <div class="card-deck bg-transparent col-12 justify-content-center align-items-center">
-                        <div class="card bg-transparent border-0 col-md-4">
-                            <i class="fas fa-code fa-3x text-white text-center"></i>
-                            <div class="card-body bg-transparent">
-                                <h5 class="card-title text-uppercase text-white text-center">Langages</h5>
-                                <p class="card-text">
-                                    <ul class="text-white text-center m-0 p-0">
-                                        <li>HTML/CSS</li>
-                                        <li>SASS/SCSS</li>
-                                        <li>JAVASCRIPT/JQUERY</li>
-                                        <li>PHP</li>
-                                        <li>SQL</li>
-                                        <li>PL/SQL</li>
-                                    </ul>
-                                </p>                                
+                        <div class="col-md-4">
+                            <div class="card bg-transparent p-4 borderCard">
+                                <i class="fas fa-code fa-3x text-center"></i>
+                                <div class="card-body bg-transparent">
+                                    <h5 class="card-title text-uppercase text-center">Langages</h5>
+                                    <p class="card-text">
+                                        <ul class="text-center m-0 p-0">
+                                            <li>HTML/CSS</li>
+                                            <li>SASS/SCSS</li>
+                                            <li>JAVASCRIPT/JQUERY</li>
+                                            <li>PHP</li>
+                                            <li>SQL</li>
+                                            <li>PL/SQL</li>
+                                        </ul>
+                                    </p>                                
+                                </div>
                             </div>
                         </div>
                         <div class="card bg-transparent border-0 col-md-4">
-                            <i class="fas fa-laptop-code fa-3x text-white text-center"></i>
+                            <i class="fas fa-laptop-code fa-3x text-center"></i>
                             <div class="card-body bg-transparent">
-                                <h5 class="card-title text-uppercase text-white text-center">Frameworks & CMS</h5>
+                                <h5 class="card-title text-uppercase text-center">Frameworks & CMS</h5>
                                 <p class="card-text">
-                                    <ul class="text-white text-center m-0 p-0">
+                                    <ul class="text-center m-0 p-0">
                                         <li>BOOTSTRAP</li>
                                         <li>VUE.JS</li>
                                         <li>ANGULAR</li>
@@ -148,11 +87,11 @@
                             </div>
                         </div>
                         <div class="card bg-transparent border-0 col-md-4">
-                            <i class="fas fa-database fa-3x text-white text-center"></i>
+                            <i class="fas fa-database fa-3x text-center"></i>
                             <div class="card-body bg-transparent">
-                                <h5 class="card-title text-uppercase text-white text-center">Base de données & Logiciels</h5>
+                                <h5 class="card-title text-uppercase text-center">Base de données & Logiciels</h5>
                                 <p class="card-text">
-                                    <ul class="text-white text-center m-0 p-0 text-uppercase">
+                                    <ul class="text-center m-0 p-0 text-uppercase">
                                         <li>MYSQL</li>
                                         <li>ORACLE</li>
                                         <li>Visual Studio Code</li>
@@ -166,8 +105,8 @@
                 </div>
         </section>
          <section id="experience" class="container p-3">
-            <h3 class="text-black p-2 text-uppercase text-center">Expérience</h3>
-            <div class="row w-100 justify-content-center">
+            <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                <h3 class="text-uppercase titleSection">Expérience</h3>
                 <div class="underline mb-5"></div>
             </div>
             <div class="row">
@@ -184,78 +123,116 @@
                     Imperdiet nulla malesuada pellentesque elit eget. Commodo elit at imperdiet dui. 
                     Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed.</p>
                 </div>
-                <div class="col-lg-4">
-                    <img src="images/photo.jpg" alt="Melissa Da Costa" class="w-75">
-                </div>
             </div> 
         </section>
-         <section id="education" class="container p-3">
-            <h3 class="text-black p-2 text-uppercase text-center">Education</h3>
-            <div class="row w-100 justify-content-center">
-                <div class="underline mb-5"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Volutpat consequat mauris nunc congue nisi vitae suscipit. Scelerisque eu ultrices vitae auctor eu augue. 
-                    Ipsum consequat nisl vel pretium lectus quam id leo. Dictumst quisque sagittis purus sit amet volutpat consequat. 
-                    Elit ullamcorper dignissim cras tincidunt lobortis. Ut pharetra sit amet aliquam id diam. 
-                    Integer enim neque volutpat ac tincidunt vitae semper quis lectus. 
-                    Sed enim ut sem viverra aliquet eget sit. Ut sem viverra aliquet eget sit. 
-                    Blandit aliquam etiam erat velit scelerisque in dictum non. Congue mauris rhoncus aenean vel elit. 
-                    Eget magna fermentum iaculis eu non diam phasellus. Amet mattis vulputate enim nulla. 
-                    Arcu vitae elementum curabitur vitae nunc sed. Eu augue ut lectus arcu bibendum at varius. 
-                    Imperdiet nulla malesuada pellentesque elit eget. Commodo elit at imperdiet dui. 
-                    Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed.</p>
-                </div>
-                <div class="col-lg-4">
-                    <img src="images/photo.jpg" alt="Melissa Da Costa" class="w-75">
-                </div>
-            </div> 
-        </section>
-         <section id="portfolio" class="container p-3">
-            <h3 class="text-black p-2 text-uppercase text-center">Portfolio</h3>
-            <div class="row w-100 justify-content-center">
-                <div class="underline mb-5"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Volutpat consequat mauris nunc congue nisi vitae suscipit. Scelerisque eu ultrices vitae auctor eu augue. 
-                    Ipsum consequat nisl vel pretium lectus quam id leo. Dictumst quisque sagittis purus sit amet volutpat consequat. 
-                    Elit ullamcorper dignissim cras tincidunt lobortis. Ut pharetra sit amet aliquam id diam. 
-                    Integer enim neque volutpat ac tincidunt vitae semper quis lectus. 
-                    Sed enim ut sem viverra aliquet eget sit. Ut sem viverra aliquet eget sit. 
-                    Blandit aliquam etiam erat velit scelerisque in dictum non. Congue mauris rhoncus aenean vel elit. 
-                    Eget magna fermentum iaculis eu non diam phasellus. Amet mattis vulputate enim nulla. 
-                    Arcu vitae elementum curabitur vitae nunc sed. Eu augue ut lectus arcu bibendum at varius. 
-                    Imperdiet nulla malesuada pellentesque elit eget. Commodo elit at imperdiet dui. 
-                    Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed.</p>
-                </div>
-                <div class="col-lg-4">
-                    <img src="images/photo.jpg" alt="Melissa Da Costa" class="w-75">
-                </div>
-            </div> 
-        </section>
-         <section id="cv" class="container p-3">
-            <div class="text-center my-5">
-                <h3 class="text-black p-2 text-uppercase">Curriculum Vitae</h3>
-                <div class="row w-100 justify-content-center">
+         <section id="education" class="container-fluid p-3 bgLightPurple">
+            <div class="container">
+                <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="text-uppercase titleSection">Education</h3>
                     <div class="underline mb-5"></div>
                 </div>
-                <button type="button" class="btn btn-outline-dark customBtn text-uppercase">Télécharger mon CV</button>
+                <div class="row justify-content-center">
+                    <h3>2020</h3>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <img src="./images/afpa_logo.jpg" alt="afpa_logo" class="card-img ">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Développeuse web et web mobile</h5>
+                              <p class="card-text">AFPA, à Créteil, France</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="row justify-content-center">
+                    <h3>2009</h3>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <img src="./images/ucla_logo.jpg" alt="ucla_logo" class="card-img">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Analyste de Systèmes</h5>
+                              <p class="card-text">UCLA, à Barquisimeto, Venezuela</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+         <section id="portfolio" class="container p-3">
+            <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                <h3 class="text-uppercase titleSection">Portfolio</h3>
+                <div class="underline mb-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Volutpat consequat mauris nunc congue nisi vitae suscipit. Scelerisque eu ultrices vitae auctor eu augue. 
+                    Ipsum consequat nisl vel pretium lectus quam id leo. Dictumst quisque sagittis purus sit amet volutpat consequat. 
+                    Elit ullamcorper dignissim cras tincidunt lobortis. Ut pharetra sit amet aliquam id diam. 
+                    Integer enim neque volutpat ac tincidunt vitae semper quis lectus. 
+                    Sed enim ut sem viverra aliquet eget sit. Ut sem viverra aliquet eget sit. 
+                    Blandit aliquam etiam erat velit scelerisque in dictum non. Congue mauris rhoncus aenean vel elit. 
+                    Eget magna fermentum iaculis eu non diam phasellus. Amet mattis vulputate enim nulla. 
+                    Arcu vitae elementum curabitur vitae nunc sed. Eu augue ut lectus arcu bibendum at varius. 
+                    Imperdiet nulla malesuada pellentesque elit eget. Commodo elit at imperdiet dui. 
+                    Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/photo.jpg" alt="Melissa Da Costa" class="w-75">
+                </div>
             </div> 
+        </section>
+        <section id="cv" class="container p-3">
+            <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="text-uppercase titleSection">Curriculum Vitae</h3>
+                    <div class="underline mb-5"></div>
+            </div>
+            <!-- Lien trigger modal -->
+            <div class="d-flex justify-content-center mb-4">
+                <a data-toggle="modal" data-target="#staticBackdrop">
+                    <img src="./images/cv_dwwm_melissa_dacosta_min.jpg" alt="cv_melissa_dacosta" class="img-thumbsnail ">
+                </a>
+            </div>            
+  
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./images/cv_dwwm_melissa_dacosta.jpg" alt="cv_melissa_dacosta" class="w-100">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary bgPurple" data-dismiss="modal">Close</button>
+                        <a class="btn btn-outline-dark customBtn text-uppercase btn"></a><span>Télécharger mon CV</span></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-outline-dark customBtn text-uppercase"><span class="bgGradient textBtn">Télécharger mon CV</span></a>
+            </div>
         </section>
          <section id="contactMe" class="container-fluid p-3 bgPurple">
             <div class="container">
-                <h3 class="text-black p-2 text-uppercase text-white text-center">Contact</h3>
-                <div class="row w-100 justify-content-center">
+                <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="text-uppercase titleSection">Contact</h3>
                     <div class="underline mb-5"></div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
                             <!-- Prénom -->
                             <div class="form-group">
                                 <input type="text" id="name" name="name" class="form-control" placeholder="Nom">
@@ -271,21 +248,22 @@
                             <div class="form-group">
                                     <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Votre message"></textarea>
                             </div>
+                            <button type="submit" class="btn btn-outline-dark bg-white customBtn text-uppercase">Envoyer</button>
                         </form>
                     </div>
                     <div class="col-lg-6">
                         <ul class="list-unstyled">
                             <li class="text-center">
-                                <i class="fas fa-map-marker-alt text-white fa-2x"></i> 
-                                <p class="text-white">Créteil, France</p>
+                                <i class="fas fa-map-marker-alt bgGradient fa-2x"></i> 
+                                <p class="bgGradient">Créteil, France</p>
                             </li>
                             <li class="text-center">
-                                <i class="fas fa-mobile-alt text-white fa-2x"></i> 
-                                <p class="text-white">07 61 28 74 12</p>
+                                <i class="fas fa-mobile-alt bgGradient fa-2x"></i> 
+                                <p class="bgGradient">07 61 28 74 12</p>
                             </li>
                             <li class="text-center">
-                                <i class="far fa-envelope text-white fa-2x"></i> 
-                                <p class="text-white">contact@melissadacosta.fr</p>
+                                <i class="far fa-envelope bgGradient fa-2x"></i> 
+                                <p class="bgGradient">contact@melissadacosta.fr</p>
                             </li>
                         </ul>
                     </div>
@@ -297,28 +275,26 @@
 
     <footer class="bgDarkGrey">
         <div class="container">
-            <div class="col-6">
-                <h4 class="textLila">Menu</h4>
-                <div class="row">
-                    <nav class="nav flex-column">
-                        <a class="nav-link text-white" href="#aboutMe">À Propos</a>
-                        <a class="nav-link text-white" href="#skils">Compétences</a>
-                        <a class="nav-link text-white" href="#experience">Expérience</a>
-                    </nav>
-                    <nav class="nav flex-column">
-                        <a class="nav-link text-white" href="#education">Education</a>
-                        <a class="nav-link text-white" href="#portfolio">Portfolio</a>
-                        <a class="nav-link text-white" href="#cv">CV</a>
-                    </nav>
-                </div>
-            </div>
+            <nav class="nav justify-content-around my-4">
+                <a class="nav-link text-white" href="#aboutMe">À Propos</a>
+                <a class="nav-link text-white" href="#skils">Compétences</a>
+                <a class="nav-link text-white" href="#experience">Expérience</a>
+                <a class="nav-link text-white" href="#education">Education</a>
+                <a class="nav-link text-white" href="#portfolio">Portfolio</a>
+                <a class="nav-link text-white" href="#cv">CV</a>
+            </nav>
+
+            <div class="row justify-content-around my-4">
+                <a href="https://www.linkedin.com/in/melissa-da-costa/" class=""><i class="fab fa-linkedin-in text-white fa-3x linkGradient"></i></a>
+                <a href="https://github.com/MelissaDCG/" class=""><i class="fab fa-github text-white fa-3x linkGradient"></i></a>        
+                <a href="#contact"><i class="far fa-envelope fa-3x text-white linkGradient"></i></a>
+           </div>
             <hr class="mt-2 mb-2" style="background-color: white;">
             <div class="text-center py-1 mb-0 text-white">
                 <small>© 2020 - Tous droits réservés</small>
             </div>
         </div>
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

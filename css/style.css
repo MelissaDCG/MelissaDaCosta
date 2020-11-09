@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Ubuntu-Regular";
-  src: url("font/Ubuntu-Regular.ttf");
+  font-family: "Anton-Regular";
+  src: url("font/anton/Anton-Regular.ttf");
 }
 
 body {
   margin: 0;
   background-color: white;
-  font-family: "Ubuntu-Regular",Arial, Verdana, sans-serif !important;
+  font-family: "Anton-Regular",Arial, Verdana, sans-serif !important;
 }
 
 .heroImage {
@@ -20,73 +20,69 @@ body {
   position: relative;
 }
 
-.fa-bars {
-  color: #ffffff !important;
-}
-
-.fa-bars:hover {
-  color: #fab49c !important;
-}
-
-#coverText {
-  border: 2px solid white;
+.bgLinear {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0E0E0E), to(rgba(0, 0, 0, 0))), url(desk2.jpg);
+  background: linear-gradient(180deg, #0E0E0E 0%, rgba(0, 0, 0, 0) 100%), url(desk2.jpg);
+  height: 100vh;
   width: 100%;
-  height: 100%;
-  font-family: "Ubuntu-Regular",Arial, Verdana, sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.textDeepPink {
+  color: #FF008A;
+}
+
+.bgGradient {
+  background: -webkit-linear-gradient(#EB0046, #ff008a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tailleNom {
-  font-size: 4rem !important;
+  font-size: 5em !important;
 }
 
 .tailleMetier {
-  font-size: 2rem !important;
+  font-size: 3em !important;
 }
 
-.colorCover {
-  /*gradient bieber's fist */
-  background: linear-gradient(315deg, rgba(255, 166, 158, 0.7) 0%, rgba(93, 73, 84, 0.7) 74%);
-}
-
-.bgPurple {
-  background-color: #94686D;
-}
-
-.bgGrey {
-  /* background-color: #94686D !important; */
-  background-color: #5D4954 !important;
-}
-
-.textLila {
-  color: #D9B8C4;
-}
-
-.bgDarkGrey {
-  background-color: #402A2C;
-}
-
-.bgLightPurple {
-  background-color: #f3d9dc;
-}
-
-.nav-link:hover {
-  color: #fba49c !important;
-}
-
-.h-85 {
-  height: 85%;
-}
-
-.h-45 {
-  height: 20%;
+.titleSection {
+  font-size: 3em !important;
 }
 
 .underline {
-  height: 3px;
-  width: 10%;
-  background: linear-gradient(315deg, rgba(255, 166, 158, 0.8) 0%, rgba(93, 73, 84, 0.8) 74%);
-  position: relative;
-  top: -15px;
+  height: 4px;
+  width: 5%;
+  background: linear-gradient(315deg, #FF008A 0%, #EB0046 75%);
+}
+
+li {
+  list-style: none;
+}
+
+.customBtn {
+  border: 3px solid !important;
+  -o-border-image: linear-gradient(315deg, #FF008A 0%, #EB0046 75%) 1 !important;
+     border-image: linear-gradient(315deg, #FF008A 0%, #EB0046 75%) 1 !important;
+}
+
+.customBtn:hover {
+  background: linear-gradient(315deg, #FF008A 0%, #EB0046 75%);
+}
+
+.textBtn:hover {
+  color: white;
+}
+
+.bgGrey {
+  background-color: #DECBB7;
+}
+
+.borderCard {
+  border: 3px solid !important;
 }
 
 .container-chevrons {
@@ -186,103 +182,14 @@ body {
   }
 }
 
-.customBtn {
-  color: #94686D !important;
-  border-color: #94686D !important;
+.bgDarkGrey {
+  background-color: #0A0A0A;
 }
 
-.customBtn:hover {
-  background: linear-gradient(315deg, rgba(255, 166, 158, 0.8) 0%, rgba(93, 73, 84, 0.8) 74%);
-  color: white !important;
-  border-color: linear-gradient(315deg, rgba(255, 166, 158, 0.8) 0%, rgba(93, 73, 84, 0.8) 74%);
-}
-
-li {
-  list-style: none;
-}
-
-.textSize {
-  font-size: 1.5rem;
-}
-
-.titleSkill {
-  font-size: 2rem;
-}
-
-.container-skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 50vh;
-}
-
-.box {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  overflow: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
-  line-height: 0;
-}
-
-.box > img {
-  width: 200%;
-  height: calc(100% - 10vh);
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.box > span {
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-}
-
-.box:hover {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-}
-
-.box:hover > img {
-  width: 100%;
-  height: 100%;
-}
-
-.container-image {
-  position: relative;
-}
-
-.image-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.bg-transparent {
-  background: transparent !important;
-}
-
-.skills {
-  position: relative;
-  width: 100%;
-  height: 450px;
-}
-
-.imageSkills {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+.linkGradient:hover {
+  background: -webkit-linear-gradient(#EB0046, #ff008a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (min-width: 992px) {
@@ -290,7 +197,7 @@ li {
     width: 20% !important;
   }
   .tailleNom {
-    font-size: 5em !important;
+    font-size: 6em !important;
   }
   .tailleMetier {
     font-size: 3em !important;
