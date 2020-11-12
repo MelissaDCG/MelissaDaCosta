@@ -2,13 +2,18 @@
 $darkGrey: #0A0A0A;
 $grey: #3a3837;
 $ligthGrey: #b9b9b9;
+$ligthestGrey : #ebebeb;
+
+.bgLigthestGrey {
+    background-color: $ligthestGrey;
+}
 
 
 $deepPink: #FF008A;
 $redCrayola:  #EB0046;
 $deepPinkWithOpactity: rgba(255,0,138,0.5);
 $redCrayolaWithOpacity: rgba(235,0,70,0.5);
-
+$gradient: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%);        
 
 // Police
 @font-face {
@@ -120,6 +125,12 @@ li {
 .borderGradient {
     border-width: medium !important;
     border-image: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%) 1 !important;
+}
+
+
+.form-control:focus {
+    border-color: $darkGrey !important;
+    box-shadow: 0 0 5px $darkGrey !important;
 }
 
 
