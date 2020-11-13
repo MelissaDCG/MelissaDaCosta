@@ -2,6 +2,10 @@
   background-color: #ebebeb;
 }
 
+.bgMediumGrey {
+  background-color: #615f5d !important;
+}
+
 @font-face {
   font-family: "Anton-Regular";
   src: url("font/anton/Anton-Regular.ttf");
@@ -122,10 +126,54 @@ li {
      border-image: linear-gradient(315deg, #FF008A 0%, #EB0046 75%) 1 !important;
 }
 
+.form-control {
+  border: none !important;
+  color: white !important;
+}
+
 .form-control:focus {
   border-color: #0A0A0A !important;
   -webkit-box-shadow: 0 0 5px #0A0A0A !important;
           box-shadow: 0 0 5px #0A0A0A !important;
+  background-color: #615f5d !important;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c5c5c5 !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c5c5c5 !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c5c5c5 !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c5c5c5 !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #c5c5c5 !important;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #c5c5c5 !important;
 }
 
 .container-chevrons {

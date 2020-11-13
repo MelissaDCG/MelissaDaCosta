@@ -75,6 +75,7 @@
                             <p class="card-text">
                                 <ul class="text-center m-0 p-0 text-white fontArial">
                                     <li>Bootstrap</li>
+                                    <li>Medoo</li>
                                     <li>Vue.js</li>
                                     <li>Angular</li>
                                     <li>Symfony</li>
@@ -127,6 +128,7 @@
                             <ul class="fontArial tasks">
                                 <li>Développement des nouvelles fonctionnalités au
                                     CMS Evolution.</li>
+                                <li>Intégration du framework Medoo</li>
                                 <li>Refonte du site vitrine fknet.</li>
                                 <li>Développement des nouvelles fonctionnalités au
                                     site Commandedejeuner.</li>  
@@ -134,6 +136,7 @@
                             <ul class="content-skills fontArial">
                                 <li>HTML5</li>
                                 <li>CSS3</li>
+                                <li>Medoo</li>
                                 <li>jQuery</li>
                                 <li>Ajax</li>
                                 <li>PHP</li>
@@ -249,7 +252,7 @@
                 </div>
             </div> 
         </section>
-        <section id="cv" class="container-fluid p-3 bgLigthestGrey">
+        <section id="cv" class="container-fluid p-3">
             <div class="p-2 d-flex flex-column justify-content-center align-items-center">
                     <h3 class="text-uppercase titleSection">Curriculum Vitae</h3>
                     <div class="underline mb-5"></div>
@@ -292,10 +295,10 @@
                 </a>
             </div>
         </section>
-         <section id="contactMe" class="container-fluid p-3 bgPurple">
+         <section id="contactMe" class="container-fluid p-3 bgGrey">
             <div class="container">
                 <div class="p-2 d-flex flex-column justify-content-center align-items-center">
-                    <h3 class="text-uppercase titleSection">Contact</h3>
+                    <h3 class="text-uppercase titleSection text-white">Contact</h3>
                     <div class="underline mb-5"></div>
                 </div>
                 <div class="row">
@@ -303,35 +306,35 @@
                         <form id="contact-form" name="contact-form" action="mail.php" method="POST">
                             <!-- Prénom -->
                             <div class="form-group">
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Nom">
+                                <input type="text" id="name" name="name" class="form-control rounded-0 bgMediumGrey" placeholder="Nom" required>
                                     <!-- <i class="fas fa-user form-icon-first"></i> -->
                             </div>
                         
                             <!-- Email -->
                             <div class="form-group">
-                                <input type="text" id="email" name="email" class="form-control" placeholder="Email">
+                                <input type="text" id="email" name="email" class="form-control bgMediumGrey rounded-0" placeholder="Email" required>
                             </div>
 
                             <!-- Message -->
                             <div class="form-group">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Votre message"></textarea>
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea rounded-0 bgMediumGrey" placeholder="Votre message" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-outline-dark bg-white customBtn text-uppercase"><span class="textGradient">Envoyer</span></button>
+                            <button type="submit" class="btn btn-outline-dark bg-transparent customBtn text-uppercase"><span class="textGradient">Envoyer</span></button>
                         </form>
                     </div>
                     <div class="col-lg-6">
                         <ul class="list-unstyled">
                             <li class="text-center">
                                 <i class="fas fa-map-marker-alt textGradient fa-2x"></i> 
-                                <p class="textGradient">Créteil, France</p>
+                                <p class="text-white">Créteil, France</p>
                             </li>
                             <li class="text-center">
                                 <i class="fas fa-mobile-alt textGradient fa-2x"></i> 
-                                <p class="textGradient">07 61 28 74 12</p>
+                                <p class="text-white">07 61 28 74 12</p>
                             </li>
                             <li class="text-center">
                                 <i class="far fa-envelope textGradient fa-2x"></i> 
-                                <p class="textGradient">contact@melissadacosta.fr</p>
+                                <p class="text-white">contact@melissadacosta.fr</p>
                             </li>
                         </ul>
                     </div>

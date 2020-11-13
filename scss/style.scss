@@ -1,11 +1,16 @@
 // Variables tablette de couleurs
 $darkGrey: #0A0A0A;
 $grey: #3a3837;
+$mediumGrey: #615f5d;
 $ligthGrey: #b9b9b9;
 $ligthestGrey : #ebebeb;
 
 .bgLigthestGrey {
     background-color: $ligthestGrey;
+}
+
+.bgMediumGrey {
+    background-color: $mediumGrey !important;
 }
 
 
@@ -128,10 +133,28 @@ li {
 }
 
 
-.form-control:focus {
-    border-color: $darkGrey !important;
-    box-shadow: 0 0 5px $darkGrey !important;
+.form-control {
+    border: none !important;
+    color: white !important;
+    &:focus {
+        border-color: $darkGrey !important;
+        box-shadow: 0 0 5px $darkGrey !important;
+        background-color: $mediumGrey !important;
+    }
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c5c5c5 !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #c5c5c5 !important;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #c5c5c5 !important;
+  }
 
 
 //   animation chevrons
