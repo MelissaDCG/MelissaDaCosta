@@ -283,6 +283,58 @@ li {
   -webkit-text-fill-color: transparent;
 }
 
+.tags {
+  font-size: 12px;
+}
+
+.tags li {
+  border: 1px solid #0E0E0E;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 3px 2px;
+  text-align: center;
+}
+
+.projet:hover img {
+  opacity: 0.8;
+}
+
+.projet:hover button {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.projet:hover .card-body {
+  background-color: #3a3837;
+}
+
+.projet:hover .card-title {
+  background: -webkit-linear-gradient(#EB0046, #FF008A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projet:hover .card-text {
+  color: #ebebeb;
+}
+
+.projet:hover li {
+  background: #40484D;
+  border: none !important;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 2px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 3px 2px;
+  text-align: center;
+}
+
 #cd-timeline {
   position: relative;
   padding: 2em 0;
