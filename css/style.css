@@ -288,10 +288,12 @@ li {
 }
 
 .tags li {
-  border: 1px solid #0E0E0E;
+  background: #40484D;
+  border: none !important;
   border-radius: 2px;
   display: inline-block;
   padding: 2px 10px;
+  color: rgba(255, 255, 255, 0.7);
   margin: 3px 2px;
   text-align: center;
 }
@@ -300,7 +302,7 @@ li {
   opacity: 0.8;
 }
 
-.projet:hover button {
+.projet:hover a {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -322,17 +324,6 @@ li {
 
 .projet:hover .card-text {
   color: #ebebeb;
-}
-
-.projet:hover li {
-  background: #40484D;
-  border: none !important;
-  border-radius: 2px;
-  display: inline-block;
-  padding: 2px 10px;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 3px 2px;
-  text-align: center;
 }
 
 #cd-timeline {
