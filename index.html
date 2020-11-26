@@ -7,16 +7,55 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
     <title>Melissa Da Costa site</title>
 </head>
 <body>
     <header>
-        <div class="heroImage">
+        <div id="home" class="heroImage">
             <div class="bgLinear">
-                <div class="h-100 d-flex flex-column justify-content-center align-items-center">
-                    <h1 class="textGradient tailleNom">Melissa Da Costa</h1>
-                    <h2 class="text-white tailleMetier">Développeuse Web</h2>
-                </div>               
+                <!-- the overlay -->
+                <div id="myNav" class="overlay">                
+                    <!-- the content -->
+                    <div class="overlayContent text-uppercase">
+                        <a class="nav-link linkGradient" href="#home" onclick="openNav()">Accueil</a>
+                        <a class="nav-link linkGradient" href="#aboutMe" onclick="openNav()">À propos</a>
+                        <a class="nav-link linkGradient" href="#skills" onclick="openNav()">Compétences</a>
+                        <a class="nav-link linkGradient" href="#experience" onclick="openNav()">Expérience</a>
+                        <a class="nav-link linkGradient" href="#education" onclick="openNav()">Éducation</a>
+                        <a class="nav-link linkGradient" href="#portfolio" onclick="openNav()">Portfolio</a>
+                        <a class="nav-link linkGradient" href="#cv" onclick="openNav()">CV</a>
+                        <a class="nav-link linkGradient" href="#contact" onclick="openNav()">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- button toggle-->
+                <div class="fixed-top d-flex m-4 justify-content-end">
+                    <a id="btnMenu" class="customBtn p-2" id="menu" onclick="openNav()" >
+                        <div id="navIcon">
+                            <span class="iconMenu"></span>
+                            <span class="iconMenu"></span>
+                            <span class="iconMenu"></span>
+                        </div>
+                    </a>
+                </div>                    
+                  
+                <div class="h-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                    <div class="h-75 d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="textGradient tailleNom animate__animated animate__fadeInDown">Melissa Da Costa</h1>
+                        <h2 class="text-white tailleMetier animate__animated animate__slideInUp">Développeuse Web</h2>
+                    </div>
+                    <div>
+                        <a href="#aboutMe" class="m-4">
+                            <div class="container-chevrons">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -24,31 +63,25 @@
         <section id="aboutMe" class="container p-3">
             <div class="p-2 d-flex flex-column justify-content-center align-items-center">
                 <h3 class="text-uppercase titleSection">À propos</h3>
-                <div class="underline mb-5 textGradient"></div>
+                <div class="underline mb-5 textGradient reveal"></div>
             </div>
             <div class="row">
-                <div class="col-lg-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Volutpat consequat mauris nunc congue nisi vitae suscipit. Scelerisque eu ultrices vitae auctor eu augue. 
-                    Ipsum consequat nisl vel pretium lectus quam id leo. Dictumst quisque sagittis purus sit amet volutpat consequat. 
-                    Elit ullamcorper dignissim cras tincidunt lobortis. Ut pharetra sit amet aliquam id diam. 
-                    Integer enim neque volutpat ac tincidunt vitae semper quis lectus. 
-                    Sed enim ut sem viverra aliquet eget sit. Ut sem viverra aliquet eget sit. 
-                    Blandit aliquam etiam erat velit scelerisque in dictum non. Congue mauris rhoncus aenean vel elit. 
-                    Eget magna fermentum iaculis eu non diam phasellus. Amet mattis vulputate enim nulla. 
-                    Arcu vitae elementum curabitur vitae nunc sed. Eu augue ut lectus arcu bibendum at varius. 
-                    Imperdiet nulla malesuada pellentesque elit eget. Commodo elit at imperdiet dui. 
-                    Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed.</p>
+                <div class="col-lg-8 d-flex flex-column justify-content-center">
+                    <p>Bonjour! Je m'appelle Melissa Da Costa et je suis une <strong class="fontPoppins textGradient">Développeuse Web junior</strong>, avec un background en développement PL/SQL. </p>
+                    <p>Je me sens fortement attiré par le cote back-end, donc je cherche des opportunités qui me permettent d'approfondir et continuer à 
+                        monter en competences dans ce domaine. </p>
+                    <p>Mais je ne ferme pas la porte aux opportunités comme développeuse full-stack ou même en front-end.
+                        En effet, je viens de commercer à m'autoformer sur React ;)</p>
                 </div>
                 <div class="col-lg-4">
-                    <img src="images/photo.jpg" alt="Melissa Da Costa" class="w-75">
+                    <img src="images/me.png" alt="Melissa Da Costa" class="img-fluid border-0">
                 </div>
             </div> 
         </section>
-        <section class="container-fluid m-0 p-0 bgGrey">
+        <section id="skills" class="container-fluid m-0 p-0 bgGrey">
             <div class="container p-2 d-flex flex-column justify-content-center align-items-center">
                 <h3 class="text-uppercase titleSection text-white">Compétences</h3>
-                <div class="underline mb-4"></div>
+                <div class="underline mb-4 reveal"></div>
                
                 <div class="card-deck pb-4 w-100">
                     <div class="card bg-transparent borderCard p-4">
@@ -56,7 +89,7 @@
                         <div class="card-body">
                             <h4 class="card-title text-white text-center">Langages</h4>
                             <p class="card-text">
-                                <ul class="text-center m-0 p-0 text-white fontArial">
+                                <ul class="text-center m-0 p-0 text-white fontPoppins">
                                     <li>HTML/CSS</li>
                                     <li>Sass/SCSS</li>
                                     <li>JavaScript/jQuery</li>
@@ -72,7 +105,7 @@
                         <div class="card-body">
                             <h4 class="card-title text-white text-center">Frameworks & CMS</h4>
                             <p class="card-text">
-                                <ul class="text-center m-0 p-0 text-white fontArial">
+                                <ul class="text-center m-0 p-0 text-white fontPoppins">
                                     <li>Bootstrap</li>
                                     <li>Medoo</li>
                                     <li>Vue.js</li>
@@ -88,7 +121,7 @@
                         <div class="card-body">
                             <h4 class="card-title text-white text-center">Base de données & Logiciels</h4>
                             <p class="card-text">
-                                <ul class="text-center m-0 p-0 text-white fontArial">
+                                <ul class="text-center m-0 p-0 text-white fontPoppins">
                                     <li>MySQL</li>
                                     <li>Oracle</li>
                                     <li>Visual Studio Code</li>
@@ -105,7 +138,7 @@
          <section id="experience" class="container-fluid p-3 bgLigthGrey">
             <div class="container p-2 d-flex flex-column justify-content-center align-items-center">
                 <h3 class="text-uppercase titleSection">Expérience</h3>
-                <div class="underline mb-5"></div>
+                <div class="underline mb-5 reveal"></div>
 
                 <div id="cd-timeline" class="cd-container">
                     <div class="cd-timeline-block">
@@ -124,7 +157,7 @@
                                     08/2020 - 10/2020
                                 </span>
                             </div>
-                            <ul class="fontArial tasks">
+                            <ul class="fontPoppins tasks">
                                 <li>Développement des nouvelles fonctionnalités au
                                     CMS Evolution.</li>
                                 <li>Intégration du framework Medoo</li>
@@ -132,7 +165,7 @@
                                 <li>Développement des nouvelles fonctionnalités au
                                     site Commandedejeuner.</li>  
                             </ul>
-                            <ul class="content-skills fontArial">
+                            <ul class="content-skills fontPoppins">
                                 <li>HTML5</li>
                                 <li>CSS3</li>
                                 <li>Medoo</li>
@@ -159,7 +192,7 @@
                                     08/2007 - 03/2016
                                 </span>
                             </div>
-                            <ul class="fontArial tasks">
+                            <ul class="fontPoppins tasks">
                                 <li>Support client.</li>
                                 <li>Maintenance corrective de formulaires et rapports
                                     sous Oracle Developer 6i.</li>
@@ -173,10 +206,11 @@
                                 <li>Rédiger des rapports d’activité et de reste à faire.
                                 </li>
                             </ul>
-                            <ul class="content-skills fontArial">
+                            <ul class="content-skills fontPoppins">
                                 <li>PL/SQL</li>
                                 <li>SQL</li>
                                 <li>Oracle</li>
+                                <li>Oracle Developer 6i</li>
                             </ul>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block --> 
@@ -186,8 +220,8 @@
          <section id="education" class="container-fluid p-3 bgLightPurple">
             <div class="container">
                 <div class="p-2 d-flex flex-column justify-content-center align-items-center">
-                    <h3 class="text-uppercase titleSection">Education</h3>
-                    <div class="underline mb-5"></div>
+                    <h3 class="text-uppercase titleSection">Éducation</h3>
+                    <div class="underline mb-5 reveal"></div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-6 d-flex justify-content-center align-items-center">
@@ -230,7 +264,7 @@
          <section id="portfolio" class="container-fluid p-3 bgLigthestGrey">
             <div class="container p-2 d-flex flex-column justify-content-center align-items-center">
                 <h3 class="text-uppercase titleSection">Portfolio</h3>
-                <div class="underline mb-5"></div>
+                <div class="underline mb-5 reveal"></div>
             
                 <div class="row row-cols-1 row-cols-md-3">
                     <div class="col mb-4">
@@ -246,7 +280,7 @@
                             <div class="card-body">
                             <h5 class="card-title">BD</h5>
                             <p class="card-text">Site de bd en Symfony</p>
-                            <ul class="row fontArial p-0 mb-0 justify-content-around tags">
+                            <ul class="row fontPoppins p-0 mb-0 justify-content-around tags">
                                 <li>Symfony</li>
                                 <li>Doctrine</li>
                                 <li>MySQL</li>
@@ -267,7 +301,7 @@
                             <div class="card-body">
                             <h5 class="card-title">Clinique Vétérinaire</h5>
                             <p class="card-text">Site Clinique Veterinaire en PHP POO</p>
-                            <ul class="row fontArial p-0 mb-0 justify-content-around tags">
+                            <ul class="row fontPoppins p-0 mb-0 justify-content-around tags">
                                 <li>PHP</li>
                                 <li>Bootstrap</li>
                                 <li>MVC</li>
@@ -289,7 +323,7 @@
                             <div class="card-body">
                             <h5 class="card-title">MDC Modelisme</h5>
                             <p class="card-text">Site de modelisme en PHP</p>
-                            <ul class="row fontArial p-0 mb-0 justify-content-around tags">
+                            <ul class="row fontPoppins p-0 mb-0 justify-content-around tags">
                                 <li>PHP</li>
                                 <li>jQuery</li>
                                 <li>Ajax</li>
@@ -312,7 +346,7 @@
                             <div class="card-body">
                             <h5 class="card-title">Blog Eat + Tavel + Play</h5>
                             <p class="card-text">Blog en PHP</p>
-                            <ul class="row fontArial p-0 mb-0 justify-content-around tags">
+                            <ul class="row fontPoppins p-0 mb-0 justify-content-around tags">
                                 <li>PHP</li>
                                 <li>Bootstrap</li>
                                 <li>MySQL</li>
@@ -333,7 +367,7 @@
                             <div class="card-body">
                             <h5 class="card-title">Bonita</h5>
                             <p class="card-text">Site e-commerce en WordPress</p>
-                            <ul class="row fontArial p-0 mb-0 justify-content-around tags">
+                            <ul class="row fontPoppins p-0 mb-0 justify-content-around tags">
                                 <li>WordPress</li>
                                 <li>Elementor</li>
                                 <li>MySQL</li>
@@ -354,7 +388,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Bonita</h5>
                                 <p class="card-text">Site e-commerce en Vue.js</p>
-                                <ul class="row fontArial p-0 mb-0 justify-content-around tags">
+                                <ul class="row fontPoppins p-0 mb-0 justify-content-around tags">
                                     <li>JavaScript</li>
                                     <li>Vue.js</li>
                                     <li>BootstrapVue</li>
@@ -412,12 +446,12 @@
                                       <span class="sr-only">Next</span>
                                     </a>
                                 </div> <!-- end carousel-->
-                                <p class="fontArial my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
+                                <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
                                 C'est un site de BD, qui permet de s'enregistrer, chercher des BD par auteur ou genre, il compte avec un 
                                 backoffice pour l'administrateur, et un formulaire de contact.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
-                                <span class="fontArial">Août 2020</span>
-                                <ul class="row fontArial p-0 mt-2 justify-content-around tags">
+                                <span class="fontPoppins">Août 2020</span>
+                                <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
                                     <li>Symfony</li>
                                     <li>Doctrine</li>
                                     <li>MySQL</li>
@@ -475,11 +509,11 @@
                                       <span class="sr-only">Next</span>
                                     </a>
                                 </div> <!-- end carousel-->
-                                <p class="fontArial my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
+                                <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
                                 Le TP consistait en developper un site d'une d'une clinique vétérinaire en utilisant php (POO) et le modele MVC.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
-                                <span class="fontArial">Juillet 2020</span>
-                                <ul class="row fontArial p-0 mt-2 justify-content-around tags">
+                                <span class="fontPoppins">Juillet 2020</span>
+                                <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
                                     <li>PHP</li>
                                     <li>POO</li>
                                     <li>MVC</li>
@@ -538,11 +572,11 @@
                                       <span class="sr-only">Next</span>
                                     </a>
                                 </div> <!-- end carousel-->
-                                <p class="fontArial my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
+                                <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
                                 C'est un site de modelisme, qui contient des formulaires pour la création de clients et de bons de commandes.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
-                                <span class="fontArial">Juin 2020</span>
-                                <ul class="row fontArial p-0 mt-2 justify-content-around tags">
+                                <span class="fontPoppins">Juin 2020</span>
+                                <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
                                     <li>PHP</li>
                                     <li>jQuery</li>
                                     <li>Ajax</li>
@@ -601,11 +635,11 @@
                                       <span class="sr-only">Next</span>
                                     </a>
                                 </div> <!-- end carousel-->
-                                <p class="fontArial my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
+                                <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
                                 C'est un blog, qui à un tableau de bord pour l'administration des billets.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
-                                <span class="fontArial">Mai 2020</span>
-                                <ul class="row fontArial p-0 mt-2 justify-content-around tags">
+                                <span class="fontPoppins">Mai 2020</span>
+                                <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
                                     <li>PHP</li>
                                     <li>MySQL</li>
                                     <li>Bootstrap</li>
@@ -666,12 +700,12 @@
                                       <span class="sr-only">Next</span>
                                     </a>
                                 </div> <!-- end carousel-->
-                                <p class="fontArial my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
+                                <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
                                 C'est un site d'e-commerce réalisé avec le CMS WordPress en créant un thème enfant et des differentes extensions comme 
                                 Woocommerce, Elementor, entre autres.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
-                                <span class="fontArial">Août 2020</span>
-                                <ul class="row fontArial p-0 mt-2 justify-content-around tags">
+                                <span class="fontPoppins">Août 2020</span>
+                                <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
                                     <li>WordPress</li>
                                     <li>Woocommerce</li>
                                     <li>Elementor</li>
@@ -733,12 +767,12 @@
                                       <span class="sr-only">Next</span>
                                     </a>
                                 </div> <!-- end carousel-->
-                                <p class="fontArial my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
+                                <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
                                 C'est un site d'e-commerce en Vue.js. Le TP consistait en réaliser un site (front-end) en integrant Bootstrap et le framework
                                 js Vue.js. Le site devait avoir un formulaire d'inscription validé en JavaScript.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
-                                <span class="fontArial">Août 2020</span>
-                                <ul class="row fontArial p-0 mt-2 justify-content-around tags">
+                                <span class="fontPoppins">Août 2020</span>
+                                <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
                                     <li>JavaScript</li>
                                     <li>Vue.js</li>
                                     <li>BootstrapVue</li>
@@ -762,7 +796,7 @@
         <section id="cv" class="container-fluid p-3">
             <div class="p-2 d-flex flex-column justify-content-center align-items-center">
                     <h3 class="text-uppercase titleSection">Curriculum Vitae</h3>
-                    <div class="underline mb-5"></div>
+                    <div class="underline mb-5 reveal"></div>
             </div>
             <!-- Lien trigger modal -->
             <div class="d-flex justify-content-center mb-4">
@@ -803,15 +837,15 @@
                 </a>
             </div>
         </section>
-         <section id="contactMe" class="container-fluid p-3 bgGrey">
+         <section id="contact" class="container-fluid p-3 bgGrey">
             <div class="container">
                 <div class="p-2 d-flex flex-column justify-content-center align-items-center">
                     <h3 class="text-uppercase titleSection text-white">Contact</h3>
-                    <div class="underline mb-5"></div>
+                    <div class="underline mb-5 reveal"></div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
-                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                        <form id="contact-form" name="contact-form" action="contact.php" method="POST">
                             <!-- Prénom -->
                             <div class="form-group">
                                 <input type="text" id="name" name="name" class="form-control rounded-0 bgMediumGrey" placeholder="Nom" required>
@@ -820,7 +854,7 @@
                         
                             <!-- Email -->
                             <div class="form-group">
-                                <input type="text" id="email" name="email" class="form-control bgMediumGrey rounded-0" placeholder="Email" required>
+                                <input type="mail" id="email" name="email" class="form-control bgMediumGrey rounded-0" placeholder="Email" required>
                             </div>
 
                             <!-- Message -->
@@ -829,6 +863,7 @@
                             </div>
                             <button type="submit" class="btn btn-outline-dark bg-transparent customBtn text-uppercase"><span class="textGradient">Envoyer</span></button>
                         </form>
+                        <p class="form-message text-light mt-2"></p>
                     </div>
                     <div class="col-lg-6">
                         <ul class="list-unstyled">
@@ -855,12 +890,12 @@
     <footer class="bgDarkGrey">
         <div class="container">
             <nav class="nav justify-content-around p-4">
-                <a class="nav-link text-white linkGradient border borderCard" href="#aboutMe">À Propos</a>
-                <a class="nav-link text-white linkGradient border borderCard" href="#skils">Compétences</a>
-                <a class="nav-link text-white linkGradient border borderCard" href="#experience">Expérience</a>
-                <a class="nav-link text-white linkGradient border borderCard" href="#education">Education</a>
-                <a class="nav-link text-white linkGradient border borderCard" href="#portfolio">Portfolio</a>
-                <a class="nav-link text-white linkGradient border borderCard" href="#cv">CV</a>
+                <a class="nav-link text-white linkGradient border borderCard mt-2" href="#aboutMe">À Propos</a>
+                <a class="nav-link text-white linkGradient border borderCard mt-2" href="#skills">Compétences</a>
+                <a class="nav-link text-white linkGradient border borderCard mt-2" href="#experience">Expérience</a>
+                <a class="nav-link text-white linkGradient border borderCard mt-2" href="#education">Education</a>
+                <a class="nav-link text-white linkGradient border borderCard mt-2" href="#portfolio">Portfolio</a>
+                <a class="nav-link text-white linkGradient border borderCard mt-2" href="#cv">CV</a>
             </nav>
 
             <div class="row justify-content-around my-4">
@@ -870,13 +905,25 @@
            </div>
             <hr class="mt-2 mb-2" style="background-color: white;">
             <div class="text-center py-1 mb-0 text-white">
-                <small>© 2020 - Tous droits réservés</small>
+                <small>Melissa Da Costa - Développeuse Web © 2020 </small>
             </div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+        crossorigin="anonymous">
+    </script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>

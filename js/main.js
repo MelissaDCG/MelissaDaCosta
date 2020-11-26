@@ -1,3 +1,10 @@
+
+/* Open when someone clicks on the span element */
+function openNav() {
+    $("#navIcon").toggleClass('open');
+    $("#myNav").toggleClass('showMenu');
+}
+
 $(function() {
 
 	// Get the form.
@@ -44,5 +51,4 @@ $(function() {
 			}
 		});
 	});
-
 });

@@ -25,6 +25,11 @@ $gradient: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%);
     font-family: "Anton-Regular";
     src: url("font/anton/Anton-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("font/poppins/Poppins-Regular.ttf");
+}
   
 body {
     margin: 0;
@@ -32,8 +37,8 @@ body {
     font-family: "Anton-Regular",Arial, Verdana, sans-serif !important;
 }
 
-.fontArial {
-    font-family: Arial !important;
+.fontPoppins {
+    font-family: "Poppins-Regular", Arial, sans-serif !important;
 }
   
 .heroImage {
@@ -47,8 +52,12 @@ body {
     position: relative;
 }
 
+.bgMenu {
+  background: linear-gradient(180deg, #0E0E0E 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 .bgLinear {
-    background: linear-gradient(180deg, #0E0E0E 0%, rgba(0, 0, 0, 0) 100%), url(desk2.jpg);
+    background: linear-gradient(180deg, #0E0E0E 0%, rgba(0, 0, 0, 0) 100%);
     height: 100vh;
     width: 100%;
     background-position: center;
@@ -75,6 +84,10 @@ body {
     background-color: $ligthGrey;
 }
 
+.bgDarkGrey {
+  background-color: $darkGrey;
+}
+
 .tailleNom {
     font-size: 5em !important;
 }
@@ -99,16 +112,163 @@ li {
 
 .customBtn {
     border: 3px solid !important;
-    border-image: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%) 1 !important;    
-    &:hover {
-        background: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%);
-        span {
+    border-image: linear-gradient(315deg, $deepPink 0%, $redCrayola 75%) 1 !important;  
+    // transition: all 0.5s linear;
+    background-image: linear-gradient(to left, transparent, transparent 50%,$deepPink 50%, $redCrayola) !important;
+    background-position: 100% 0 !important;
+    background-size: 200% 100% !important;
+    transition: all .25s ease-in !important;
+    &:hover, &:focus {
+        // background-image: $gradient;
+        // transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
+        background-position: 0 0 !important;
+        border-radius: 0% !important;
+        
+        .textGradient {
             background: white;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    }
+        .iconMenu {
+          background: white !important;
+        }
+    }   
 }
+
+// Menu
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.98); /* Black w/opacity */
+  overflow: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  /* The navigation links inside the overlay */
+  a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s ease; /* Transition effects on hover (color) */
+    /* When you mouse over the navigation links, change their color */
+  }
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay {
+    a {font-size: 20px}
+  }
+}
+
+/* Position the content inside the overlay */
+.overlayContent {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.showMenu {
+  width: 100% !important;
+}
+
+#navIcon {
+  width: 30px;
+  height: 28px;
+  position: relative;
+  margin: 2px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+
+
+#navIcon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: $gradient;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#navIcon span:nth-child(1) {
+top: 0px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+#navIcon span:nth-child(2) {
+top: 10px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+#navIcon span:nth-child(3) {
+top: 20px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+#navIcon.open span:nth-child(1) {
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+top: 0px;
+left: 4px;
+background: white;
+}
+
+#navIcon.open span:nth-child(2) {
+width: 0% !important;
+opacity: 0 !important;
+}
+
+#navIcon.open span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+top: 21px;
+left: 4px;
+background: white;
+}
+
+// fin menu
+
 
 .bgGrey {
     background-color: $grey;
@@ -221,9 +381,8 @@ $base: 0.6rem;
     }
 }
 
-.bgDarkGrey {
-    background-color: $darkGrey;
-}
+//   chrevrons end
+
 
 .linkGradient:hover {
     background: -webkit-linear-gradient($redCrayola, $deepPink);
@@ -496,6 +655,20 @@ $base: 0.6rem;
       text-align: right;
     }
   }
+
+/* animations at scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+/* end of animations*/
 
  
   
