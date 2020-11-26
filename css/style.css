@@ -154,8 +154,8 @@ li {
   color: #818181;
   display: block;
   /* Display block instead of inline */
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
   /* Transition effects on hover (color) */
   /* When you mouse over the navigation links, change their color */
 }
