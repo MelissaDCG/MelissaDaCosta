@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="shortcut icon" type="image/png" href="./images/MDC.png"/>
     <script src="js/main.js" defer></script>
     <script src="js/animations.js" defer></script>
     <title>Melissa Da Costa site</title>
@@ -19,19 +20,35 @@
                 <div id="myNav" class="overlay">                
                     <!-- the content -->
                     <div class="overlayContent text-uppercase h-75">
-                        <a class="nav-link linkGradient" href="#home" onclick="openNav()">Accueil</a>
-                        <a class="nav-link linkGradient" href="#aboutMe" onclick="openNav()">À propos</a>
-                        <a class="nav-link linkGradient" href="#skills" onclick="openNav()">Compétences</a>
-                        <a class="nav-link linkGradient" href="#experience" onclick="openNav()">Expérience</a>
-                        <a class="nav-link linkGradient" href="#education" onclick="openNav()">Éducation</a>
-                        <a class="nav-link linkGradient" href="#portfolio" onclick="openNav()">Portfolio</a>
-                        <a class="nav-link linkGradient" href="#cv" onclick="openNav()">CV</a>
+                        <ul class="nav flex-column d-flex justify-cntent-center align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link linkGradient" href="#home" onclick="openNav()">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link linkGradient" href="#aboutMe" onclick="openNav()">À propos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link linkGradient" href="#skills" onclick="openNav()">Compétences</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link linkGradient" href="#experience" onclick="openNav()">Expérience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link linkGradient" href="#education" onclick="openNav()">Éducation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link linkGradient" href="#portfolio" onclick="openNav()">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link linkGradient" href="#cv" onclick="openNav()">CV</a>
+                            </li>
+                        </ul>
                         <!-- <a class="nav-link linkGradient" href="#contact" onclick="openNav()">Contact</a> -->
                     </div>
-                    <div class="row justify-content-around my-4 p-2">
-                        <a href="https://www.linkedin.com/in/melissa-da-costa/" class=""><i class="fab fa-linkedin-in fa-2x linkGradient"></i></a>
-                        <a href="https://github.com/MelissaDCG/" class=""><i class="fab fa-github fa-2x linkGradient"></i></a>        
-                        <a href="#contact"><i class="far fa-envelope fa-2x linkGradient"></i></a>
+                    <div class="row justify-content-around h-25 p-2 align-items-center">
+                        <a href="https://www.linkedin.com/in/melissa-da-costa/" target="_blank" onclick="openNav()"><i class="fab fa-linkedin-in  linkGradient"></i></a>
+                        <a href="https://github.com/MelissaDCG/" target="_blank" onclick="openNav()"><i class="fab fa-github  linkGradient"></i></a>        
+                        <a href="#contact" onclick="openNav()"><i class="far fa-envelope  linkGradient"></i></a>
                     </div>
                 </div>
                 
@@ -48,8 +65,8 @@
                   
                 <div class="h-100 h-100 d-flex flex-column justify-content-center align-items-center">
                     <div class="h-75 d-flex flex-column justify-content-center align-items-center">
-                        <h1 class="textGradient tailleNom animate__animated animate__fadeInDown">Melissa Da Costa</h1>
-                        <h2 class="text-white tailleMetier animate__animated animate__slideInUp">Développeuse Web</h2>
+                        <h1 class="textGradient tailleNom animate__animated animate__fadeInDown text-center">Melissa Da Costa</h1>
+                        <h2 class="text-white tailleMetier animate__animated animate__slideInUp text-center">Développeuse Web</h2>
                     </div>
                     <div>
                         <a href="#aboutMe" class="m-4">
@@ -168,7 +185,7 @@
                                 <li>Intégration du framework Medoo</li>
                                 <li>Refonte du site vitrine fknet.</li>
                                 <li>Développement des nouvelles fonctionnalités au
-                                    site Commandedejeuner.</li>  
+                                    site Commandedejeuner.fr.</li>  
                             </ul>
                             <ul class="content-skills fontPoppins">
                                 <li>HTML5</li>
@@ -452,8 +469,8 @@
                                     </a>
                                 </div> <!-- end carousel-->
                                 <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
-                                C'est un site de BD, qui permet de s'enregistrer, chercher des BD par auteur ou genre, il compte avec un 
-                                backoffice pour l'administrateur, et un formulaire de contact.</p>
+                                C'est un site de BD qui permet de s'enregistrer, chercher des BD par auteur ou genre, il compte avec un 
+                                backoffice pour l'administrateur et un formulaire de contact.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
                                 <span class="fontPoppins">Août 2020</span>
                                 <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
@@ -515,7 +532,7 @@
                                     </a>
                                 </div> <!-- end carousel-->
                                 <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
-                                Le TP consistait en developper un site d'une d'une clinique vétérinaire en utilisant php (POO) et le modele MVC.</p>
+                                Le TP consistait en developper un site d'une clinique vétérinaire en utilisant php (POO) et le modèle MVC.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
                                 <span class="fontPoppins">Juillet 2020</span>
                                 <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
@@ -578,7 +595,7 @@
                                     </a>
                                 </div> <!-- end carousel-->
                                 <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
-                                C'est un site de modelisme, qui contient des formulaires pour la création de clients et de bons de commandes.</p>
+                                C'est un site de modelisme qui contient des formulaires pour la création de clients et de bons de commandes.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
                                 <span class="fontPoppins">Juin 2020</span>
                                 <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
@@ -641,7 +658,7 @@
                                     </a>
                                 </div> <!-- end carousel-->
                                 <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
-                                C'est un blog, qui à un tableau de bord pour l'administration des billets.</p>
+                                C'est un blog. Ce site a un tableau de bord pour l'administration des billets.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
                                 <span class="fontPoppins">Mai 2020</span>
                                 <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
@@ -774,7 +791,7 @@
                                 </div> <!-- end carousel-->
                                 <p class="fontPoppins my-2">C'est un site réalisé dans la cadre de la formation Développeur.se web et web mobile à l'AFPA.
                                 C'est un site d'e-commerce en Vue.js. Le TP consistait en réaliser un site (front-end) en integrant Bootstrap et le framework
-                                js Vue.js. Le site devait avoir un formulaire d'inscription validé en JavaScript.</p>
+                                Vue.js. Le site devait avoir un formulaire d'inscription validé en JavaScript.</p>
                                 <i class="far fa-calendar-alt textGradient"></i>
                                 <span class="fontPoppins">Août 2020</span>
                                 <ul class="row fontPoppins p-0 mt-2 justify-content-around tags">
@@ -800,7 +817,7 @@
         </section>
         <section id="cv" class="container-fluid p-3">
             <div class="p-2 d-flex flex-column justify-content-center align-items-center">
-                    <h3 class="text-uppercase titleSection">Curriculum Vitae</h3>
+                    <h3 class="text-uppercase titleSection text-center">Curriculum Vitae</h3>
                     <div class="underline mb-5 reveal"></div>
             </div>
             <!-- Lien trigger modal -->
@@ -853,24 +870,24 @@
                         <form id="contact-form" name="contact-form" action="contact.php" method="POST">
                             <!-- Prénom -->
                             <div class="form-group">
-                                <input type="text" id="name" name="name" class="form-control rounded-0 bgMediumGrey" placeholder="Nom" required>
+                                <input type="text" id="name" name="name" class="form-control rounded-0 bgMediumGrey fontPoppins" placeholder="Nom" required>
                                     <!-- <i class="fas fa-user form-icon-first"></i> -->
                             </div>
                         
                             <!-- Email -->
                             <div class="form-group">
-                                <input type="mail" id="email" name="email" class="form-control bgMediumGrey rounded-0" placeholder="Email" required>
+                                <input type="mail" id="email" name="email" class="form-control bgMediumGrey rounded-0 fontPoppins" placeholder="Email" required>
                             </div>
 
                             <!-- Message -->
                             <div class="form-group">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea rounded-0 bgMediumGrey" placeholder="Votre message" required></textarea>
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea rounded-0 bgMediumGrey fontPoppins" placeholder="Votre message" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-outline-dark bg-transparent customBtn text-uppercase"><span class="textGradient">Envoyer</span></button>
                         </form>
                         <p class="form-message text-light mt-2"></p>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 fontPoppins">
                         <ul class="list-unstyled">
                             <li class="text-center">
                                 <i class="fas fa-map-marker-alt textGradient fa-2x"></i> 
@@ -904,12 +921,12 @@
             </nav>
 
             <div class="row justify-content-around my-4">
-                <a href="https://www.linkedin.com/in/melissa-da-costa/" class=""><i class="fab fa-linkedin-in text-white fa-3x linkGradient"></i></a>
-                <a href="https://github.com/MelissaDCG/" class=""><i class="fab fa-github text-white fa-3x linkGradient"></i></a>        
+                <a href="https://www.linkedin.com/in/melissa-da-costa/" target="_blank" class=""><i class="fab fa-linkedin-in text-white fa-3x linkGradient"></i></a>
+                <a href="https://github.com/MelissaDCG/" target="_blank" class=""><i class="fab fa-github text-white fa-3x linkGradient"></i></a>        
                 <a href="#contact"><i class="far fa-envelope fa-3x text-white linkGradient"></i></a>
            </div>
             <hr class="mt-2 mb-2" style="background-color: white;">
-            <div class="text-center py-1 mb-0 text-white">
+            <div class="text-center py-1 mb-0 text-white fontPoppins">
                 <small>Melissa Da Costa - Développeuse Web © 2020 </small>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
  
 // EDIT THE 2 LINES BELOW AS REQUIRED
-$email_to = "melissadacosta2712@gmail.com";
+$email_to = "contact@melissadacosta.fr";
 $email_subject = "Le formulaire d'envoi";
 
 $errors = [];
